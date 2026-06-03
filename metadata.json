@@ -1,0 +1,6 @@
+{
+  "name": "Control de Gastos de Obra",
+  "description": "Aplicación para el control de gastos de obra en AR$ y USD con persistencia directa en carpetas locales.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

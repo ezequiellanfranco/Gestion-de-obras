@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-bg-main: #0f172a;
+  --color-surface-main: #131c2e;
+  --color-surface-sec: #1e293b;
+  --color-border-main: #334155;
+  --color-accent-sky: #38bdf8;
+  --color-accent-blue: #0284c7;
+  --color-text-main: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-text-darker: #64748b;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom CSS classes representing the High Density Style override */
+.high-density-panel {
+  background-color: #131c2e;
+  border: 1px solid #334155;
+  border-radius: 4px;
+}
+
+.high-density-header {
+  background-color: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+.high-density-input {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #f1f5f9;
+  border-radius: 4px;
+}
+
+.high-density-input:focus {
+  border-color: #38bdf8;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
+}
+
+.btn-primary {
+  background-color: #0284c7;
+  color: #ffffff;
+  border: 1px solid #0369a1;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0369a1;
+  transform: none;
+}
+
+.btn-secondary {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #334155;
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
+.btn-danger {
+  background-color: #7f1d1d;
+  color: #fecaca;
+  border: 1px solid #991b1b;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn-danger:hover {
+  background-color: #991b1b;
+  color: #ffffff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
